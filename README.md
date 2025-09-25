@@ -139,9 +139,3 @@ python predict.py --image_path path/to/image.jpg
 
 ---
 
-### Optional Notes
-
-You can also add badges for Python version, license, or build status at the top of the README for a more professional GitHub appearance.
-
----
-
