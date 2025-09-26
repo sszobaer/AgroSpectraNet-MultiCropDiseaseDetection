@@ -1,17 +1,18 @@
 # AgroSpectraNet
 
-**AgroSpectraNet** is a deep learning-based framework for multi-crop disease detection. It is designed to accurately classify diseases across multiple crops under real-world conditions, leveraging both local and global image features to ensure robust performance. This project aims to provide a practical tool for precision agriculture and early disease detection, facilitating healthier crop management and improved yields.
+**AgroSpectraNet** is a deep learning framework for multi-crop disease detection, designed to accurately classify diseases across multiple crops under real-world conditions. By leveraging both local and global image features, it provides robust performance, making it a practical tool for precision agriculture and early disease detection.
 
 ---
 
 ## Table of Contents
 
 * [Overview](#overview)
+* [Authors](#authors)
 * [Features](#features)
 * [Dataset](#dataset)
 * [Methodology](#methodology)
 * [Installation](#installation)
-* [Usage](#usage)
+* [Usage in JupyterLab](#usage-in-jupyterlab)
 * [Results](#results)
 * [Limitations & Future Work](#limitations--future-work)
 
@@ -19,31 +20,40 @@
 
 ## Overview
 
-AgroSpectraNet addresses the challenges faced in automated crop disease detection by integrating:
+AgroSpectraNet addresses challenges in automated crop disease detection by integrating:
 
 * A lightweight **EfficientNet-B0 backbone** for local region-of-interest (ROI) extraction.
 * **ConvNeXt-Tiny** architecture for capturing global context.
 * Real-time deployment capabilities suitable for mobile or edge devices.
 
-The framework has been trained on a diverse dataset of images representing multiple crops and disease types, ensuring robustness against variations in environmental conditions, lighting, and background noise.
+The framework has been trained on a diverse dataset of images representing multiple crops and disease types, ensuring robustness against variations in lighting, background, and environmental conditions.
 
 ---
+## Authors
 
+| Author                 | Contribution                                                                                                   |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **S. S. Zobaer Ahmed** | Conducted the main experiments, wrote the Methodology and Results Analysis sections, reviewed selected papers. |
+| **Barno Biswas**       | Wrote the Conclusion section, assisted with experiments, helped merge the dataset, reviewed papers.            |
+| **Tanisha Fairooz**    | Wrote the Introduction section, collected dataset, reviewed additional papers for Introduction.                |
+| **Samsun Nahar Eity**  | Collected dataset, wrote the Data Collection section with 6 pie charts, reviewed papers.                       |
+
+---
 ## Features
 
 * Multi-crop disease detection.
 * Combines local and global image features for improved accuracy.
 * Lightweight and efficient, suitable for real-time deployment.
-* Data preprocessing, augmentation, and normalization integrated.
-* Modular design for easy extension to additional crops or diseases.
+* Data preprocessing, augmentation, and normalization included.
+* Interactive exploration and visualization through Jupyter notebooks.
 
 ---
 
 ## Dataset
 
-* Collected a total of **18,592 images** across **six crop types**.
+* Contains **18,592 images** across **six crop types**.
 * Includes both healthy and diseased samples.
-* Data preprocessing steps included:
+* Preprocessing steps applied:
 
   * Removal of duplicates and corrupted images
   * Standardization of image dimensions
@@ -53,37 +63,33 @@ The framework has been trained on a diverse dataset of images representing multi
 
 ## Methodology
 
-1. **Data Preprocessing & Augmentation:** Ensures high-quality input data for model training.
+1. **Data Preprocessing & Augmentation:** Ensures high-quality input for training.
 2. **Model Architecture:**
 
-   * EfficientNet-B0 for local ROI extraction.
-   * ConvNeXt-Tiny for global context representation.
+   * EfficientNet-B0 for local ROI extraction
+   * ConvNeXt-Tiny for global context
 3. **Training:**
 
-   * Optimized using Adam optimizer with a suitable learning rate scheduler.
-   * Binary cross-entropy or categorical cross-entropy as the loss function.
+   * Optimized using Adam with learning rate scheduling
+   * Binary or categorical cross-entropy loss
 4. **Evaluation:**
 
-   * Metrics include accuracy, precision, recall, F1-score, and confusion matrix visualization.
-   * Cross-validation to ensure generalization.
+   * Metrics: accuracy, precision, recall, F1-score
+   * Confusion matrix visualization within notebooks
+   * Cross-validation for generalization
 
 ---
 
 ## Installation
 
-1. Clone this repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/AgroSpectraNet.git
-```
-
-2. Navigate to the project directory:
-
-```bash
 cd AgroSpectraNet
 ```
 
-3. Create a virtual environment (optional but recommended):
+2. Create a virtual environment (optional but recommended):
 
 ```bash
 python -m venv venv
@@ -91,51 +97,57 @@ source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 ```
 
-4. Install dependencies:
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+4. Launch JupyterLab:
+
+```bash
+jupyter lab
+```
+
 ---
 
-## Usage
+## Usage in JupyterLab
 
-1. Place your dataset in the `data/` directory.
-2. Update configuration in `config.py` (paths, hyperparameters).
-3. Train the model:
+1. Open the notebooks in the `notebooks/` directory.
+2. Configure dataset paths and hyperparameters in `config.py` if required.
+3. Execute cells interactively to:
 
-```bash
-python train.py
-```
-
-4. Evaluate the model:
-
-```bash
-python evaluate.py
-```
-
-5. Generate predictions on new images:
-
-```bash
-python predict.py --image_path path/to/image.jpg
-```
+   * Preprocess and augment data
+   * Train the model
+   * Evaluate performance metrics
+   * Generate predictions on new images
+4. Visualize results such as accuracy curves, confusion matrices, and ROC curves directly in the notebook.
 
 ---
 
 ## Results
 
-* Achieved **high accuracy across multiple crop types**.
-* Confusion matrix and performance metrics can be found in the `results/` directory.
-* The trained model is optimized for **real-time inference** on edge devices.
+* High classification accuracy across multiple crops.
+* Interactive plots and confusion matrices generated in notebooks.
+* Model optimized for real-time inference on edge devices.
 
 ---
 
 ## Limitations & Future Work
 
-* Current model trained on six crops; future work could extend this to additional crops.
+* Currently trained on six crops; future extensions can include more crops.
 * Model performance may degrade under extreme environmental conditions.
-* Integration with a mobile app or edge deployment platform is planned.
+* Plans to integrate with a mobile or edge deployment platform for in-field usage.
+Here’s a **formal IEEE-style Acknowledgements section** suitable for a paper or thesis for your AgroSpectraNet project:
 
 ---
+
+## Acknowledgements
+
+The authors would like to express their sincere gratitude to the following:
+
+* The developers of **PyTorch** and **Torchvision** for their open-source frameworks and pretrained models, which were instrumental in conducting the experiments.
+* 🎓 **Jubayer Ahamed**, Lecturer, Department of Computer Science, AIUB, for his continuous guidance, constructive feedback, and encouragement throughout the development and execution of this project.
+
+Their contributions have greatly assisted in the successful completion of this research.
 
