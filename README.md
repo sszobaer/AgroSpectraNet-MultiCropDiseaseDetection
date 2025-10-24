@@ -34,7 +34,7 @@ The framework has been trained on a diverse dataset of images representing multi
 | Author                 | Contribution                                                                                                   |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------- |
 | **S. S. Zobaer Ahmed** | Conducted the main experiments, wrote the Methodology and Results Analysis sections, reviewed selected papers. |
-| **Barno Biswas**       | Wrote the Conclusion and Abstract, assisted with experiments, helped merge the dataset, reviewed papers.       |
+| **Barno Biswas**       | Assisted with experiments, helped merge the dataset, reviewed papers, and Wrote the Conclusion and Abstract.   |
 | **Tanisha Fairooz**    | Wrote the Introduction section, collected dataset, reviewed additional papers for Introduction.                |
 | **Samsun Nahar Eity**  | Collected dataset, wrote the Data Collection section with 6 pie charts, reviewed papers.                       |
 
